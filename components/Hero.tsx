@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Zap, Shield, Globe } from 'lucide-react'
+import { ArrowRight, Zap, Shield, Globe, Database } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Hero() {
@@ -91,12 +91,20 @@ export default function Hero() {
         className="mt-16 relative"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 blur-3xl opacity-20 -z-10"></div>
-        <div className="glass-dark rounded-lg p-1">
-          <img
-            src="/api/placeholder/1200/600"
-            alt="PostgreDB Dashboard"
-            className="rounded-lg w-full"
-          />
+        <div className="bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-white/20 dark:border-gray-700/50">
+          <div className="text-center">
+            <div className="inline-flex items-center space-x-2 bg-blue-600/20 rounded-full px-6 py-3 mb-6">
+              <Database className="h-6 w-6 text-blue-400" />
+              <span className="text-blue-100 font-medium">Dashboard Preview</span>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Powerful Database Management
+            </h3>
+            <p className="text-blue-100 max-w-2xl mx-auto">
+              Monitor performance, manage connections, and scale your databases with our intuitive dashboard.
+              Real-time metrics and one-click operations make database management effortless.
+            </p>
+          </div>
         </div>
       </motion.div>
     </section>
